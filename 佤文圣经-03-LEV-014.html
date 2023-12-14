@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#083F0E">
+<title>Lai Li-we 14</title>
+
+<script type='text/javascript' src='js/jquery-1.11.3.min.js'></script>
+<script type='text/javascript' src='js/popcorn-complete.min.js'></script>
+<script type='text/javascript' src='js/jquery.tooltipster.min.js'></script>
+<script type='text/javascript' src='js/app-builder-audio.js'></script>
+<script type='text/javascript' src='js/app-builder-footnotes.js'></script>
+<script type='text/javascript' src='js/app-builder-menus.js'></script>
+<script type='text/javascript' src='js/app-builder-video.js'></script>
+<script type='text/javascript' src='js/book-names.js'></script>
+
+<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+
+<link rel="stylesheet" type="text/css" href="css/sab-stylesheet.css" />
+
+<script type="text/javascript">
+
+// Audio
+$(window).load(function() {
+
+var pop = Popcorn("#audio");
+
+var timings = [
+    { label: "s1", start: 0, end: 4.47 },
+    { label: "1-2a", start: 4.72, end: 11.99 },
+    { label: "1-2b", start: 12.24, end: 15.59 },
+    { label: "1-2c", start: 15.84, end: 20.39 },
+    { label: "3a", start: 20.64, end: 25.51 },
+    { label: "3b", start: 25.76, end: 28.11 },
+    { label: "4a", start: 28.36, end: 31.75 },
+    { label: "4b", start: 32, end: 35.99 },
+    { label: "4c", start: 36.24, end: 37.99 },
+    { label: "4d", start: 38.24, end: 41.15 },
+    { label: "4e", start: 41.4, end: 42.95 },
+    { label: "5", start: 43.2, end: 54.11 },
+    { label: "6a", start: 54.36, end: 57.99 },
+    { label: "6b", start: 58.24, end: 63.03 },
+    { label: "6c", start: 63.28, end: 65.03 },
+    { label: "6d", start: 65.28, end: 67.19 },
+    { label: "7a", start: 67.44, end: 73.43 },
+    { label: "7b", start: 73.68, end: 78.67 },
+    { label: "7c", start: 78.92, end: 81.87 },
+    { label: "7d", start: 82.12, end: 85.79 },
+    { label: "8a", start: 86.04, end: 89.39 },
+    { label: "8b", start: 89.64, end: 91.31 },
+    { label: "8c", start: 91.56, end: 92.71 },
+    { label: "8d", start: 92.96, end: 97.63 },
+    { label: "8e", start: 97.88, end: 100.79 },
+    { label: "8f", start: 101.04, end: 102.23 },
+    { label: "8g", start: 102.48, end: 108.71 },
+    { label: "9a", start: 108.96, end: 111.35 },
+    { label: "9b", start: 111.6, end: 114.35 },
+    { label: "9c", start: 114.6, end: 116.03 },
+    { label: "9d", start: 116.28, end: 121.87 },
+    { label: "9e", start: 122.12, end: 124.15 },
+    { label: "9f", start: 124.4, end: 125.27 },
+    { label: "9g", start: 125.52, end: 125.95 },
+    { label: "9h", start: 126.2, end: 131.19 },
+    { label: "10a", start: 131.44, end: 133.83 },
+    { label: "10b", start: 134.08, end: 136.03 },
+    { label: "10c", start: 136.28, end: 138.59 },
+    { label: "10d", start: 138.84, end: 140.43 },
+    { label: "10e", start: 140.68, end: 142.55 },
+    { label: "10f", start: 142.8, end: 146.19 },
+    { label: "10g", start: 146.44, end: 151.11 },
+    { label: "10h", start: 151.36, end: 155.19 },
+    { label: "11a", start: 155.44, end: 160.15 },
+    { label: "11b", start: 160.4, end: 163.35 },
+    { label: "12a", start: 163.6, end: 167.43 },
+    { label: "12b", start: 167.68, end: 170.35 },
+    { label: "12c", start: 170.6, end: 173.51 },
+    { label: "12d", start: 173.76, end: 180.87 },
+    { label: "13a", start: 181.12, end: 182.51 },
+    { label: "13b", start: 182.76, end: 186.23 },
+    { label: "13c", start: 186.48, end: 190.63 },
+    { label: "13d", start: 190.88, end: 192.67 },
+    { label: "13e", start: 192.92, end: 198.91 },
+    { label: "13f", start: 199.16, end: 201.15 },
+    { label: "13g", start: 201.4, end: 202.95 },
+    { label: "14a", start: 203.2, end: 209.03 },
+    { label: "14b", start: 209.28, end: 216.23 },
+    { label: "14c", start: 216.48, end: 218.63 },
+    { label: "14d", start: 218.88, end: 220.23 },
+    { label: "15", start: 220.48, end: 226.91 },
+    { label: "16a", start: 227.16, end: 231.19 },
+    { label: "16b", start: 231.44, end: 234.15 },
+    { label: "17a", start: 234.4, end: 239.63 },
+    { label: "17b", start: 239.88, end: 242.31 },
+    { label: "17c", start: 242.56, end: 249.67 },
+    { label: "17d", start: 249.92, end: 252.35 },
+    { label: "17e", start: 252.6, end: 256.79 },
+    { label: "18a", start: 257.04, end: 263.55 },
+    { label: "18b", start: 263.8, end: 270.55 },
+    { label: "19a", start: 270.8, end: 276.79 },
+    { label: "19b", start: 277.04, end: 279.31 },
+    { label: "19c", start: 279.56, end: 282.75 },
+    { label: "20a", start: 283, end: 287.27 },
+    { label: "20b", start: 287.52, end: 293.23 },
+    { label: "20c", start: 293.48, end: 295.43 },
+    { label: "21a", start: 295.68, end: 299.39 },
+    { label: "21b", start: 299.64, end: 302.87 },
+    { label: "21c", start: 303.12, end: 306.15 },
+    { label: "21d", start: 306.4, end: 309.59 },
+    { label: "21e", start: 309.84, end: 314.07 },
+    { label: "21f", start: 314.32, end: 318.91 },
+    { label: "21g", start: 319.16, end: 321.75 },
+    { label: "21h", start: 322, end: 326.31 },
+    { label: "22a", start: 326.56, end: 329.11 },
+    { label: "22b", start: 329.36, end: 330.11 },
+    { label: "22c", start: 330.36, end: 332.03 },
+    { label: "22d", start: 332.28, end: 335.83 },
+    { label: "22e", start: 336.08, end: 339.43 },
+    { label: "23a", start: 339.68, end: 341.23 },
+    { label: "23b", start: 341.48, end: 346.35 },
+    { label: "23c", start: 346.6, end: 352.59 },
+    { label: "23d", start: 352.84, end: 354.11 },
+    { label: "24a", start: 354.36, end: 361.27 },
+    { label: "24b", start: 361.52, end: 365.39 },
+    { label: "25a", start: 365.64, end: 368.11 },
+    { label: "25b", start: 368.36, end: 369.91 },
+    { label: "25c", start: 370.16, end: 373.99 },
+    { label: "25d", start: 374.24, end: 376.91 },
+    { label: "25e", start: 377.16, end: 380.39 },
+    { label: "26", start: 380.64, end: 386.91 },
+    { label: "27a", start: 387.16, end: 390.67 },
+    { label: "27b", start: 390.92, end: 393.87 },
+    { label: "28a", start: 394.12, end: 399.39 },
+    { label: "28b", start: 399.64, end: 401.91 },
+    { label: "28c", start: 402.16, end: 405.39 },
+    { label: "28d", start: 405.64, end: 410.87 },
+    { label: "29a", start: 411.12, end: 412.83 },
+    { label: "29b", start: 413.08, end: 417.51 },
+    { label: "29c", start: 417.76, end: 423.79 },
+    { label: "30a", start: 424.04, end: 428.19 },
+    { label: "30b", start: 428.44, end: 429.51 },
+    { label: "30c", start: 429.76, end: 430.75 },
+    { label: "31a", start: 431, end: 433.91 },
+    { label: "31b", start: 434.16, end: 436.71 },
+    { label: "31c", start: 436.96, end: 439.11 },
+    { label: "31d", start: 439.36, end: 448.03 },
+    { label: "32a", start: 448.28, end: 452.87 },
+    { label: "32b", start: 453.12, end: 460.59 },
+    { label: "s2", start: 460.84, end: 462.15 },
+    { label: "33", start: 462.4, end: 468.55 },
+    { label: "34a", start: 468.8, end: 475.51 },
+    { label: "34b", start: 475.76, end: 478.99 },
+    { label: "35a", start: 479.24, end: 480.71 },
+    { label: "35b", start: 480.96, end: 483.87 },
+    { label: "35c", start: 484.12, end: 486.55 },
+    { label: "36a", start: 486.8, end: 493.55 },
+    { label: "36b", start: 493.8, end: 500.15 },
+    { label: "36c", start: 500.4, end: 502.51 },
+    { label: "36d", start: 502.76, end: 507.19 },
+    { label: "37a", start: 507.44, end: 508.79 },
+    { label: "37b", start: 509.04, end: 511.87 },
+    { label: "37c", start: 512.12, end: 515.55 },
+    { label: "38a", start: 515.8, end: 517.91 },
+    { label: "38b", start: 518.16, end: 522.75 },
+    { label: "39a", start: 523, end: 524.75 },
+    { label: "39b", start: 525, end: 526.95 },
+    { label: "39c", start: 527.2, end: 530.11 },
+    { label: "40a", start: 530.36, end: 535.31 },
+    { label: "40b", start: 535.56, end: 539.27 },
+    { label: "41a", start: 539.52, end: 540.87 },
+    { label: "41b", start: 541.12, end: 547.91 },
+    { label: "41c", start: 548.16, end: 551.63 },
+    { label: "42a", start: 551.88, end: 555.15 },
+    { label: "42b", start: 555.4, end: 558.03 },
+    { label: "42c", start: 558.28, end: 562.11 },
+    { label: "43a", start: 562.36, end: 564.39 },
+    { label: "43b", start: 564.64, end: 566.55 },
+    { label: "43c", start: 566.8, end: 568.43 },
+    { label: "43d", start: 568.68, end: 571.83 },
+    { label: "44a", start: 572.08, end: 574.91 },
+    { label: "44b", start: 575.16, end: 577.99 },
+    { label: "44c", start: 578.24, end: 580.59 },
+    { label: "45a", start: 580.84, end: 582.91 },
+    { label: "45b", start: 583.16, end: 583.99 },
+    { label: "45c", start: 584.24, end: 585.23 },
+    { label: "45d", start: 585.48, end: 591.15 },
+    { label: "46a", start: 591.4, end: 595.39 },
+    { label: "46b", start: 595.64, end: 598.43 },
+    { label: "46c", start: 598.68, end: 602.43 },
+    { label: "47a", start: 602.68, end: 606.23 },
+    { label: "47b", start: 606.48, end: 609.47 },
+    { label: "47c", start: 609.72, end: 613.19 },
+    { label: "48a", start: 613.44, end: 616.03 },
+    { label: "48b", start: 616.28, end: 619.67 },
+    { label: "48c", start: 619.92, end: 623.55 },
+    { label: "48d", start: 623.8, end: 627.87 },
+    { label: "48e", start: 628.12, end: 630.35 },
+    { label: "49a", start: 630.6, end: 633.03 },
+    { label: "49b", start: 633.28, end: 634.91 },
+    { label: "49c", start: 635.16, end: 637.87 },
+    { label: "49d", start: 638.12, end: 640.47 },
+    { label: "49e", start: 640.72, end: 643.03 },
+    { label: "50a", start: 643.28, end: 647.03 },
+    { label: "50b", start: 647.28, end: 649.87 },
+    { label: "51a", start: 650.12, end: 654.67 },
+    { label: "51b", start: 654.92, end: 657.23 },
+    { label: "51c", start: 657.48, end: 660.07 },
+    { label: "51d", start: 660.32, end: 664.03 },
+    { label: "51e", start: 664.28, end: 666.55 },
+    { label: "52a", start: 666.8, end: 668.91 },
+    { label: "52b", start: 669.16, end: 670.11 },
+    { label: "52c", start: 670.36, end: 673.51 },
+    { label: "52d", start: 673.76, end: 674.99 },
+    { label: "52e", start: 675.24, end: 676.71 },
+    { label: "52f", start: 676.96, end: 679.95 },
+    { label: "53a", start: 680.2, end: 684.59 },
+    { label: "53b", start: 684.84, end: 687.47 },
+    { label: "53c", start: 687.72, end: 689.75 },
+    { label: "53d", start: 690, end: 692.63 },
+    { label: "53e", start: 692.88, end: 696.67 },
+    { label: "54", start: 696.92, end: 701.11 },
+    { label: "55-56a", start: 701.36, end: 703.11 },
+    { label: "55-56b", start: 703.36, end: 704.87 },
+    { label: "55-56c", start: 705.12, end: 706.39 },
+    { label: "55-56d", start: 706.64, end: 712.31 },
+    { label: "57", start: 712.56, end: 724.11 }
+];
+
+initAudioTimings(pop, timings);
+});
+
+$(document).ready(function() {
+
+// Footnotes and Cross-references
+var crossrefs = {
+    "X-0": "<div class=\"footnote-p\"><span class=\"xo\">14.1-2 </span><span class=\"xt\"><span class=\"reflink\"><a href=\"佤文圣经-40-MAT-008.html#v4\">Lai Ma-thaix 8.4</a></span>; <span class=\"reflink\"><a href=\"佤文圣经-41-MRK-001.html#v44\">Lai Ma-kheu 1.44</a></span>; <span class=\"reflink\"><a href=\"佤文圣经-42-LUK-005.html#v14\">Lai Lu-cia 5.14</a></span>; <span class=\"reflink\"><a href=\"佤文圣经-42-LUK-017.html#v14\">Lai Lu-cia 17.14</a></span>.</span></div>"
+};
+
+initFootnotes(crossrefs);
+
+});
+
+// Chapters
+var chapters = [ { start: 1, end: 27 }];
+var hasIntro = true;
+var baseRef  = "佤文圣经-03-LEV-";
+
+
+</script>
+</head>
+
+<body class="browser" dir="LTR">
+
+<div id="book-menu"></div>
+<div id="chapter-menu"></div>
+
+<div id="toolbar-top">
+<div class="navigation-top">
+  <span class="button"><a href='佤文圣经-02-EXO-000.html' title='Previous Book'>&nbsp;&lt;&lt;&nbsp;</a></span>
+  <span class="button"><a href='佤文圣经-03-LEV-013.html' title='Previous Chapter'>&nbsp;&nbsp;&lt;&nbsp;&nbsp;</a></span>
+  <span id="book-selector"><a href="#" onclick="toggleBookMenu(); return false;">&nbsp;&nbsp;Lai Li-we&nbsp;&nbsp;</a></span>
+<span id="chapter-selector"><a href="#" onclick="toggleChapterMenu(chapters, hasIntro, baseRef); return false;">&nbsp;&nbsp;14&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='佤文圣经-03-LEV-015.html' title='Next Chapter'>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</a></span>
+  <span class="button"><a href='佤文圣经-04-NUM-000.html' title='Next Book'>&nbsp;&gt;&gt;&nbsp;</a></span>
+</div>
+</div>
+
+<div id="content">
+
+
+<div class="s"><div id="Ts1" class="txs">Been khaix hoik singax jhawm saux si pawg</div></div><a id="v1"></a>
+<div class="m">
+<div class="c-drop">14</div> <div id="T1-2a" class="txs"><span class="v">1-2</span><span class="vsp">&nbsp;</span><span class="footnote selectable" id="X-0"><sup>a</sup></span>Simiang Siyiex tawx lox pa mawh lox tat jhawm prawng khaix hoik singax singeh jhawm saux si pawg ka Maw-si.</div> <div id="T1-2b" class="txs">Singaix pa hoik krai pao singax singeh pui saux an,</div> <div id="T1-2c" class="txs">pui tag caw tix viex nawh hoek ka cao giex kaing li dee an.</div><span id="bookmarks1-2"></span> <a id="v3"></a><div id="T3a" class="txs"><span class="v">3</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag sang viex lih jhak nawh ka plak praix nyiex bang,</div> <div id="T3b" class="txs">phan hoik yaox grawng pa moi jhawm saux nawh,</div><span id="bookmarks3"></span> <a id="v4"></a><div id="T4a" class="txs"><span class="v">4</span><span class="vsp">&nbsp;</span>tag sang tawx lox nhie nawh viex kawn sim ra mu,</div> <div id="T4b" class="txs">pa hoik kieh mawh pa singax singeh ka daux been,</div> <div id="T4c" class="txs">khaox si oe bhawng tix gawng,</div> <div id="T4d" class="txs">mai maox keei raoh tix nyaing,</div> <div id="T4e" class="txs">khawm rao rib im krim tix gawng.</div><span id="bookmarks4"></span> <a id="v5"></a><div id="T5" class="txs"><span class="v">5</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag tawx lox nhie pui pauh ka sim an tix mu pa ot ka piang aw tiex pa hoik kin kix tix sau rawm ot ka daux,</div><span id="bookmarks5"></span> <a id="v6"></a><div id="T6a" class="txs"><span class="v">6</span><span class="vsp">&nbsp;</span>khaix an mai nawh baox giex sim an tang mu,</div> <div id="T6b" class="txs">cub daux nham tau mai khawm khaox si oe bhawng,</div> <div id="T6c" class="txs">mai maox keei raoh rawt,</div> <div id="T6d" class="txs">mai rao rib im krim.</div><span id="bookmarks6"></span></div><span id="bookmarks6"></span><a id="v7"></a>
+<div class="p"><div id="T7a" class="txs"><span class="v">7</span><span class="vsp">&nbsp;</span>Nawh tag phruah nham an aliah bawg ka piang pui saux pa hoik krai pao deeh kieh singax singeh,</div> <div id="T7b" class="txs">khaix an mai krai pao nawh mawh pa singax singeh.</div> <div id="T7c" class="txs">Nawh tag ploi ka sim pa kawn im an,</div> <div id="T7d" class="txs">kieh sim an pu hu plak tiag heue.</div><span id="bookmarks7"></span> <a id="v8"></a><div id="T8a" class="txs"><span class="v">8</span><span class="vsp">&nbsp;</span>Pui an caw tix si daux ka kraung ceep tix,</div> <div id="T8b" class="txs">khlao hauk tix khawm uik,</div> <div id="T8c" class="txs">mai heem tix,</div> <div id="T8d" class="txs">khaix an nawh tom tag mawh pa singax singeh ka daux been,</div> <div id="T8e" class="txs">tag chix tix laig ot ka daux nyiex bang,</div> <div id="T8f" class="txs">viang mawh nan,</div> <div id="T8g" class="txs">nawh tag caw tix ran ot ka plak praix nyiex gox cao tix aliah singaix.</div><span id="bookmarks8"></span> <a id="v9"></a><div id="T9a" class="txs"><span class="v">9</span><span class="vsp">&nbsp;</span>Yam hoik hoek ka daux aliah singaix,</div> <div id="T9b" class="txs">nawh tag deeh baox khlao hauk kaing tix,</div> <div id="T9c" class="txs">mai hauk jheeh tix,</div> <div id="T9d" class="txs">mai hauk ngai tix khawm can hauk pa koe ka gaw kaux tix khawm uik,</div> <div id="T9e" class="txs">mai baox si daux kraung ceep tix,</div> <div id="T9f" class="txs">mai heem tix,</div> <div id="T9g" class="txs">khaix an,</div> <div id="T9h" class="txs">tom tag sawn mawh pa singax singeh ka daux been heue.</div><span id="bookmarks9"></span></div><span id="bookmarks9"></span><a id="v10"></a>
+<div class="p"><div id="T10a" class="txs"><span class="v">10</span><span class="vsp">&nbsp;</span>Yam hoik hoek ka daux daix singaix,</div> <div id="T10b" class="txs">nawh tag viex kawn yung mhaing ra mu,</div> <div id="T10c" class="txs">pa ang koe dee mat dee ne,</div> <div id="T10d" class="txs">kawn yung siang tix mu,</div> <div id="T10e" class="txs">pa tag naog tix num,</div> <div id="T10f" class="txs">pa ang koe dee mat dee ne,</div> <div id="T10g" class="txs">phawng mien pa hoik klao tix tau mai bee sime loe kongcing,</div> <div id="T10h" class="txs">mai bee sime loe son tix son kongsheng.</div><span id="bookmarks10"></span> <a id="v11"></a><div id="T11a" class="txs"><span class="v">11</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag viex nawh mai khawng tan an kix,</div> <div id="T11b" class="txs">hu ka diang siviex nyiex gox buan man Simiang Siyiex,</div><span id="bookmarks11"></span> <a id="v12"></a><div id="T12a" class="txs"><span class="v">12</span><span class="vsp">&nbsp;</span>khaix an tan ka kawn yung mhaing tix mu,</div> <div id="T12b" class="txs">mai bee sime loe son tix son kongsheng,</div> <div id="T12c" class="txs">kieh mawh Krax-tan Pa-pluat-ploi-phit-lud,</div> <div id="T12d" class="txs">kieh pa tan an kix mawh khawng tan pa blawk tix tan ka Simiang Siyiex heue.</div><span id="bookmarks12"></span> <a id="v13"></a><div id="T13a" class="txs"><span class="v">13</span><span class="vsp">&nbsp;</span>Nawh tag pauh kawn yung an,</div> <div id="T13b" class="txs">ka dee pauh Krax-tan Pa-pluat-ploi-phimap,</div> <div id="T13c" class="txs">mai Krax-tan Pa-gleeing ka daux nyiex pa singax singeh.</div> <div id="T13d" class="txs">Nawh tag sang yuh nan,</div> <div id="T13e" class="txs">mawh kheu Krax-tan Pa-pluat-ploi-phit-lud mai Krax-tan Pa-pluat-ploi-phimap,</div> <div id="T13f" class="txs">hoik mawh cie cao giex kaing li,</div> <div id="T13g" class="txs">hoik mawh  pa kied singax singeh.</div><span id="bookmarks13"></span></div><span id="bookmarks13"></span><a id="v14"></a>
+<div class="p"><div id="T14a" class="txs"><span class="v">14</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag teei nham Krax-tan Pa-pluat-ploi-phit-lud tix blah,</div> <div id="T14b" class="txs">mai kraix ka toh yhaok plak dawm pui pa hoik krai pao deeh kieh mawh pa singax singeh an,</div> <div id="T14c" class="txs">mai ka giien ting taix kawn dawm,</div> <div id="T14d" class="txs">giien ting caong khawn dawm.</div><span id="bookmarks14"></span> <a id="v15"></a><div id="T15" class="txs"><span class="v">15</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag hieh bee sime tix blah ot ka daux tawm taix khawn goix tix,</div><span id="bookmarks15"></span> <a id="v16"></a><div id="T16a" class="txs"><span class="v">16</span><span class="vsp">&nbsp;</span>cub giien taix khawn dawm tix ka daux bee an,</div> <div id="T16b" class="txs">phruah aliah bawg sivoe Simiang Siyiex.</div><span id="bookmarks16"></span> <a id="v17"></a><div id="T17a" class="txs"><span class="v">17</span><span class="vsp">&nbsp;</span>Nawh kawx tag teei bee pa kawn deuk ot ka daux tawm taix tix tix blah,</div> <div id="T17b" class="txs">nham Krax-tan Pa-pluat-ploi-phit-lud tix blah,</div> <div id="T17c" class="txs">kraix ka yhaok khawn dawm pui pa hoik krai pao mawh pa deeh singax singeh an,</div> <div id="T17d" class="txs">mai ka giien ting taix khawn dawm,</div> <div id="T17e" class="txs">khawm ka giien ting caong khawn dawm.</div><span id="bookmarks17"></span> <a id="v18"></a><div id="T18a" class="txs"><span class="v">18</span><span class="vsp">&nbsp;</span>Nawh kawx baox hieh bee pa kawn deuk ot ka daux tawm taix tix khankix ka piang kaing pui an.</div> <div id="T18b" class="txs">Cao giex kaing li tag yuh pui an singax singeh ka krax ceu an sivoe Simiang Siyiex heue.</div><span id="bookmarks18"></span></div><span id="bookmarks18"></span><a id="v19"></a>
+<div class="p"><div id="T19a" class="txs"><span class="v">19</span><span class="vsp">&nbsp;</span>Khaix an cao giex kaing li tag tan Krax-tan Pa-pluat-ploi-phimap,</div> <div id="T19b" class="txs">yuh been krax pa singax singeh son pui an,</div> <div id="T19c" class="txs">pauh ka khawng brie Krax-tan Pa-gleeing,</div><span id="bookmarks19"></span> <a id="v20"></a><div id="T20a" class="txs"><span class="v">20</span><span class="vsp">&nbsp;</span>tan tau mai Krax-tan Nghox-koi ka piang khu dee tan.</div> <div id="T20b" class="txs">Cao giex kaing li yuh pui an singax singeh ka krax ceu an,</div> <div id="T20c" class="txs">nawh tom tag singax singeh heue.</div><span id="bookmarks20"></span></div><span id="bookmarks20"></span><a id="v21"></a>
+<div class="p"><div id="T21a" class="txs"><span class="v">21</span><span class="vsp">&nbsp;</span>Phan pui an mawh pui pa hot pa shiah,</div> <div id="T21b" class="txs">mai ang pon liag ka ceu an kix tom nie,</div> <div id="T21c" class="txs">nawh chix tix siao ka kawn yung mhaing tix mu,</div> <div id="T21d" class="txs">kieh mawh Krax-tan Pa-pluat-ploi-phit-lud,</div> <div id="T21e" class="txs">tan mawh khawng tan pa blawk tix tan ka Simiang Siyiex.</div> <div id="T21f" class="txs">Nawh tag viex ngie phawng mien pa hoik klao tau mai bee sime tix kongcing hoek,</div> <div id="T21g" class="txs">kieh mawh Krax-tan Nghox-koi,</div> <div id="T21h" class="txs">baox tien viex ka bee sime loe son tix son kongsheng,</div><span id="bookmarks21"></span> <a id="v22"></a><div id="T22a" class="txs"><span class="v">22</span><span class="vsp">&nbsp;</span>Nawh baox viex si kaux ra mu,</div> <div id="T22b" class="txs">phan ang mawh nan,</div> <div id="T22c" class="txs">si kaux krie hoek,</div> <div id="T22d" class="txs">tix mu kieh mawh Krax-tan Pa-pluat-ploi-phimap,</div> <div id="T22e" class="txs">an tix mu kieh mawh Krax-tan Pa-gleeing.</div><span id="bookmarks22"></span></div><span id="bookmarks22"></span><a id="v23"></a>
+<div class="p"><div id="T23a" class="txs"><span class="v">23</span><span class="vsp">&nbsp;</span>Yam hoik hoek ka daux daix singaix,</div> <div id="T23b" class="txs">pa mawh singaix pa hoik krai pao nawh mawh pa singax singeh,</div> <div id="T23c" class="txs">nawh tag viex khawng tan an kix hoek ka diang siviex nyiex gox buan man sivoe Simiang Siyiex,</div> <div id="T23d" class="txs">tawx ka cao giex kaing li.</div><span id="bookmarks23"></span> <a id="v24"></a><div id="T24a" class="txs"><span class="v">24</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag teei ka kawn yung mhaing Krax-tan Pa-pluat-ploi-phit-lud mai bee sime,</div> <div id="T24b" class="txs">kieh mawh khawng tan pa blawk tix tan ka Simiang Siyiex.</div><span id="bookmarks24"></span> <a id="v25"></a><div id="T25a" class="txs"><span class="v">25</span><span class="vsp">&nbsp;</span>Nawh tag pauh ka kawn yung an,</div> <div id="T25b" class="txs">teei nham tix blah,</div> <div id="T25c" class="txs">kraix ka piang dawng yhaok khawn dawm pui an,</div> <div id="T25d" class="txs">mai ka piang giien ting taix khawn dawm,</div> <div id="T25e" class="txs">khawm ka piang giien ting caong khawn dawm.</div><span id="bookmarks25"></span> <a id="v26"></a><div id="T26" class="txs"><span class="v">26</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag hieh bee an khankix tix blah ka daux tawm taix khawn goix tix,</div><span id="bookmarks26"></span> <a id="v27"></a><div id="T27a" class="txs"><span class="v">27</span><span class="vsp">&nbsp;</span>cub giien taix khawn dawm tix ka daux bee,</div> <div id="T27b" class="txs">phruah nawh aliah bawg ka sivoe Simiang Siyiex.</div><span id="bookmarks27"></span> <a id="v28"></a><div id="T28a" class="txs"><span class="v">28</span><span class="vsp">&nbsp;</span>Nawh tag kraix bee ka piang dawng yhaok khawn dawm pui an,</div> <div id="T28b" class="txs">ka piang giien ting taix khawn dawm,</div> <div id="T28c" class="txs">mai ka piang giien ting caong khawm dawm nawh,</div> <div id="T28d" class="txs">pa mawh ka dee hoik kraix nham Krax-tan Pa-pluat-ploi-phit-lud.</div><span id="bookmarks28"></span> <a id="v29"></a><div id="T29a" class="txs"><span class="v">29</span><span class="vsp">&nbsp;</span>Nawh tag kraix bee pa kawn deuk an,</div> <div id="T29b" class="txs">pa koe daux tawm taix tix ka piang kaing pui an,</div> <div id="T29c" class="txs">nawh tag siao grawng krax in yuh been pa singax singeh son pui an sivoe Simiang Siyiex.</div><span id="bookmarks29"></span></div><span id="bookmarks29"></span><a id="v30"></a>
+<div class="p"><div id="T30a" class="txs"><span class="v">30</span><span class="vsp">&nbsp;</span>Khaix an nawh tag sang tan si kaux tix mu,</div> <div id="T30b" class="txs">phan ang mawh nan,</div> <div id="T30c" class="txs">si kaux krie,</div><span id="bookmarks30"></span> <a id="v31"></a><div id="T31a" class="txs"><span class="v">31</span><span class="vsp">&nbsp;</span>kieh mawh Krax-tan Pa-pluat-ploi-phimap,</div> <div id="T31b" class="txs">an tix mu kieh mawh Krax-tan Pa-gleeing,</div> <div id="T31c" class="txs">tan tau mai Krax-tan Nghox-koi.</div> <div id="T31d" class="txs">Cao giex kaing li tag siao grawng krax ceu in yuh been pa singax singeh son pui an ka sivoe Simiang Siyiex.</div><span id="bookmarks31"></span> <a id="v32"></a><div id="T32a" class="txs"><span class="v">32</span><span class="vsp">&nbsp;</span>In mawh son been pa khaw pui pa hoik kham jhawm saux si pawg tix hawt,</div> <div id="T32b" class="txs">mawh kheu ang nawh pon tan ka khawng brie pa khaw tix sang tan son lox tat jhawm prawng pa singax singeh heue.</div><span id="bookmarks32"></span></div>
+
+<div class="s"><div id="Ts2" class="txs">Been son pa moh nyiex</div></div><span id="bookmarks32"></span><a id="v33"></a>
+<div class="p"><div id="T33" class="txs"><span class="v">33</span><span class="vsp">&nbsp;</span>Simiang Siyiex tawx grawng lox tat jhawm prawng son nyiex ma pa moh ka Maw-si mai Ya-loeng.</div><span id="bookmarks33"></span> <a id="v34"></a><div id="T34a" class="txs"><span class="v">34</span><span class="vsp">&nbsp;</span>Lox tat jhawm prawng in mawh pa siao khaix hoik laig pui Yi-seu-liex ka daux haktiex Cia-nang,</div> <div id="T34b" class="txs">pa hoik tawx Simiang Siyiex mawh sin ngao cie kix.</div><span id="bookmarks34"></span> <a id="v35"></a><div id="T35a" class="txs"><span class="v">35</span><span class="vsp">&nbsp;</span>Pui mawx ang ah,</div> <div id="T35b" class="txs">pa hoik yaox grawng pa hoik moh nyiex ma tix,</div> <div id="T35c" class="txs">tag caw tix krai ka cao giex kaing li.</div><span id="bookmarks35"></span> <a id="v36"></a><div id="T36a" class="txs"><span class="v">36</span><span class="vsp">&nbsp;</span>Cao giex kaing li tag tawx lox nhie pui gah can kraung pa koe ka daux nyiex an lih khawm uik,</div> <div id="T36b" class="txs">son ang kraung pa koe ka daux nyiex an sang krai pao tix mawh pa ang singax.</div> <div id="T36c" class="txs">Khaix hoik gah kraung khrai lih,</div> <div id="T36d" class="txs">cao giex kaing li tag laig ka daux nyiex,</div><span id="bookmarks36"></span> <a id="v37"></a><div id="T37a" class="txs"><span class="v">37</span><span class="vsp">&nbsp;</span>jhak ka dee koe pa moh.</div> <div id="T37b" class="txs">Phan yaox koe pa klai bawd ang ah,</div> <div id="T37c" class="txs">pa raoh bawd pa haok laux yuh ding nyiex ang ah,</div><span id="bookmarks37"></span> <a id="v38"></a><div id="T38a" class="txs"><span class="v">38</span><span class="vsp">&nbsp;</span>nawh tag lih plak praix nyiex,</div> <div id="T38b" class="txs">mai sau jhong nyeep siviex nyiex an aliah singaix.</div><span id="bookmarks38"></span> <a id="v39"></a><div id="T39a" class="txs"><span class="v">39</span><span class="vsp">&nbsp;</span>Yam hoik hoek ka daux aliah singaix,</div> <div id="T39b" class="txs">nawh tag baox deeh jhak kah,</div> <div id="T39c" class="txs">phan pa moh an hoik tauh hu,</div><span id="bookmarks39"></span> <a id="v40"></a><div id="T40a" class="txs"><span class="v">40</span><span class="vsp">&nbsp;</span>tag tawx lox nhie pui pu plieh simaox pa koe moh an hu,</div> <div id="T40b" class="txs">tik ka dee pa ang singax singeh ka plak praix veng.</div><span id="bookmarks40"></span> <a id="v41"></a><div id="T41a" class="txs"><span class="v">41</span><span class="vsp">&nbsp;</span>Khaix an,</div> <div id="T41b" class="txs">nawh tag sang tawx lox nhie pui kheet tix tik ka phawng tiex pa koe ka ding nyiex an,</div> <div id="T41c" class="txs">tik ka dee pa ang singax singeh plak praix veng.</div><span id="bookmarks41"></span> <a id="v42"></a><div id="T42a" class="txs"><span class="v">42</span><span class="vsp">&nbsp;</span>Ka dee hoik pu plieh simaox hu khaing dee an,</div> <div id="T42b" class="txs">tag sang deeh sau simaox tang mu kah,</div> <div id="T42c" class="txs">teei phawng tiex cox deeh kraix mhawm ka heue.</div><span id="bookmarks42"></span></div><span id="bookmarks42"></span><a id="v43"></a>
+<div class="p"><div id="T43a" class="txs"><span class="v">43</span><span class="vsp">&nbsp;</span>Khaix hoik pu plieh simaox,</div> <div id="T43b" class="txs">kheet tix tik phawng tiex lih,</div> <div id="T43c" class="txs">deeh kraix ding mhawm,</div> <div id="T43d" class="txs">phan nyiex an ca baox kawn moh,</div><span id="bookmarks43"></span> <a id="v44"></a><div id="T44a" class="txs"><span class="v">44</span><span class="vsp">&nbsp;</span>cao giex kaing li tag sang hu lam lia,</div> <div id="T44b" class="txs">phan moh an hoik tauh hu,</div> <div id="T44c" class="txs">nyiex an tag mawh pa ang singax singeh.</div><span id="bookmarks44"></span> <a id="v45"></a><div id="T45a" class="txs"><span class="v">45</span><span class="vsp">&nbsp;</span>Tag sang yieh ka nyiex an,</div> <div id="T45b" class="txs">simaox,</div> <div id="T45c" class="txs">khaox rong,</div> <div id="T45d" class="txs">phawng tiex mai gah tix tik plak praix veng ka dee pa ang singax singeh.</div><span id="bookmarks45"></span> <a id="v46"></a><div id="T46a" class="txs"><span class="v">46</span><span class="vsp">&nbsp;</span>Ka daux bawg yam pa hoik nyeep sau ka jhong siviex,</div> <div id="T46b" class="txs">pui mawx ang ah phan laig ka daux,</div> <div id="T46c" class="txs">pui an tag mawh pa ang singax tom hoek plak pon bo.</div><span id="bookmarks46"></span> <a id="v47"></a><div id="T47a" class="txs"><span class="v">47</span><span class="vsp">&nbsp;</span>Pui mawx ang ah pa it ka daux nyiex an,</div> <div id="T47b" class="txs">phan ang mawh nan ih nyaux ka daux,</div> <div id="T47c" class="txs">tag caw tix si daux ka kraung ceep tix heue.</div><span id="bookmarks47"></span></div><span id="bookmarks47"></span><a id="v48"></a>
+<div class="p"><div id="T48a" class="txs"><span class="v">48</span><span class="vsp">&nbsp;</span>Khaix hoik deeh kraix ka nyiex an mhawm,</div> <div id="T48b" class="txs">cao giex kaing li tag deeh hoek tix jhak,</div> <div id="T48c" class="txs">phan ding nyiex an ang lai baox deeh moh,</div> <div id="T48d" class="txs">nawh tag krai pao nyiex an mawh pa singax singeh,</div> <div id="T48e" class="txs">mawh kheu hoik grai pa moh an.</div><span id="bookmarks48"></span> <a id="v49"></a><div id="T49a" class="txs"><span class="v">49</span><span class="vsp">&nbsp;</span>Nawh tag sang viex sim ra mu,</div> <div id="T49b" class="txs">khaox si oe bhawng tix gawng,</div> <div id="T49c" class="txs">maox keei pa raoh rawt tix nyaing,</div> <div id="T49d" class="txs">khawm  rao rib im krim tix gawng,</div> <div id="T49e" class="txs">son sang yuh been nyiex an singax.</div><span id="bookmarks49"></span> <a id="v50"></a><div id="T50a" class="txs"><span class="v">50</span><span class="vsp">&nbsp;</span>Nawh tag pauh sim an tix mu ka piang aw tiex,</div> <div id="T50b" class="txs">pa hoik kin tix sau rawm naog kah,</div><span id="bookmarks50"></span> <a id="v51"></a><div id="T51a" class="txs"><span class="v">51</span><span class="vsp">&nbsp;</span>khaix an teei khaox si oe bhawng mai rao rib im krim,</div> <div id="T51b" class="txs">maox keei pa raoh rawt,</div> <div id="T51c" class="txs">khawm sim pa kawn im an tang mu,</div> <div id="T51d" class="txs">mai teei nham pa hoik cub kix ka daux pan,</div> <div id="T51e" class="txs">mai phruah ka nyiex aliah bawg.</div><span id="bookmarks51"></span> <a id="v52"></a><div id="T52a" class="txs"><span class="v">52</span><span class="vsp">&nbsp;</span>Nawh tag teei nham sim,</div> <div id="T52b" class="txs">rawm im,</div> <div id="T52c" class="txs">sim pa im mai khaox si oe bhawng,</div> <div id="T52d" class="txs">rao rib im krim,</div> <div id="T52e" class="txs">khawm keei raoh rawt,</div> <div id="T52f" class="txs">yuh son nyiex an ka been pa singax singeh.</div><span id="bookmarks52"></span> <a id="v53"></a><div id="T53a" class="txs"><span class="v">53</span><span class="vsp">&nbsp;</span>Khaix an nawh tag deeh ploi sim pa kawn im an,</div> <div id="T53b" class="txs">kieh nawh deeh pu hu plak tiag.</div> <div id="T53c" class="txs">Nawh siao ka grawng krax in,</div> <div id="T53d" class="txs">yuh been pa singax singeh son nyiex an,</div> <div id="T53e" class="txs">mai nyiex an tag mawh pa singax singeh heue.</div><span id="bookmarks53"></span></div><span id="bookmarks53"></span><a id="v54"></a>
+<div class="p"><div id="T54" class="txs"><span class="v">54</span><span class="vsp">&nbsp;</span>In plak piang mawh grawng been son jhawm saux si pawg,</div><span id="bookmarks54"></span> <a id="v55"></a><div id="T55-56a" class="txs"><span class="v">55-56</span><span class="vsp">&nbsp;</span>pa koe saux muad ka hak,</div> <div id="T55-56b" class="txs">mai saux dao,</div> <div id="T55-56c" class="txs">mai saux leem,</div> <div id="T55-56d" class="txs">khawm lox tat jhawm prawng son pa moh kraung ceep mai ka nyiex ma ku ceu.</div><span id="bookmarks55-56"></span> <a id="v57"></a><div id="T57" class="txs"><span class="v">57</span><span class="vsp">&nbsp;</span>Lox tat jhawm prawng in kix tag kieh mawh mhai pa tat dut ka son ceu pa singax singeh mai pa ang singax singeh khankix heue.</div><span id="bookmarks57"></span></div>
+</div>
+
+<div id="toolbar-bottom">
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source id="audio1" src="https://lajiao24601.github.io/audio/A03___14_Leviticus___O1UUUNVS.mp3" />
+  </audio>
+</div>
+</div>
+
+<script type='text/javascript' src='./pwa-main.js'></script>
+<script>
+var coll = document.getElementsByClassName("collapsible-button");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
+}
+</script>
+</body>
+</html>
