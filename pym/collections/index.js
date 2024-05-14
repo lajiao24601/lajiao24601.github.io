@@ -1,0 +1,1 @@
+export const collections = ['cmn_C01'];
